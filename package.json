@@ -25,6 +25,10 @@
     "routes": "^2.1.0"
   },
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/express-session": "^1.18.2",
     "tsc": "^2.0.4",
     "typescript": "^5.9.3"
   }
