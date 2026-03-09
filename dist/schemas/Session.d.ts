@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 declare const Session: mongoose.Model<{
     type: "multi" | "mono";
-    status: "draft" | "active" | "completed";
-    creatorId: mongoose.Types.ObjectId;
+    status: "active" | "draft" | "completed";
     title: string;
+    creatorId: mongoose.Types.ObjectId;
     sourceFiles: mongoose.Types.DocumentArray<{
         processed: boolean;
         name?: string | null | undefined;
@@ -41,14 +41,17 @@ declare const Session: mongoose.Model<{
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, {}, {}> & {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }>;
         completedAt?: NativeDate | null | undefined;
     } | null | undefined;
@@ -60,9 +63,9 @@ declare const Session: mongoose.Model<{
     id: string;
 }, mongoose.Document<unknown, {}, {
     type: "multi" | "mono";
-    status: "draft" | "active" | "completed";
-    creatorId: mongoose.Types.ObjectId;
+    status: "active" | "draft" | "completed";
     title: string;
+    creatorId: mongoose.Types.ObjectId;
     sourceFiles: mongoose.Types.DocumentArray<{
         processed: boolean;
         name?: string | null | undefined;
@@ -100,14 +103,17 @@ declare const Session: mongoose.Model<{
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, {}, {}> & {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }>;
         completedAt?: NativeDate | null | undefined;
     } | null | undefined;
@@ -121,9 +127,9 @@ declare const Session: mongoose.Model<{
     timestamps: true;
 }> & Omit<{
     type: "multi" | "mono";
-    status: "draft" | "active" | "completed";
-    creatorId: mongoose.Types.ObjectId;
+    status: "active" | "draft" | "completed";
     title: string;
+    creatorId: mongoose.Types.ObjectId;
     sourceFiles: mongoose.Types.DocumentArray<{
         processed: boolean;
         name?: string | null | undefined;
@@ -161,14 +167,17 @@ declare const Session: mongoose.Model<{
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, {}, {}> & {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }>;
         completedAt?: NativeDate | null | undefined;
     } | null | undefined;
@@ -186,9 +195,9 @@ declare const Session: mongoose.Model<{
     timestamps: true;
 }, {
     type: "multi" | "mono";
-    status: "draft" | "active" | "completed";
-    creatorId: mongoose.Types.ObjectId;
+    status: "active" | "draft" | "completed";
     title: string;
+    creatorId: mongoose.Types.ObjectId;
     sourceFiles: mongoose.Types.DocumentArray<{
         processed: boolean;
         name?: string | null | undefined;
@@ -226,14 +235,17 @@ declare const Session: mongoose.Model<{
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, {}, {}> & {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }>;
         completedAt?: NativeDate | null | undefined;
     } | null | undefined;
@@ -243,9 +255,9 @@ declare const Session: mongoose.Model<{
     } | null | undefined;
 } & mongoose.DefaultTimestampProps, mongoose.Document<unknown, {}, {
     type: "multi" | "mono";
-    status: "draft" | "active" | "completed";
-    creatorId: mongoose.Types.ObjectId;
+    status: "active" | "draft" | "completed";
     title: string;
+    creatorId: mongoose.Types.ObjectId;
     sourceFiles: mongoose.Types.DocumentArray<{
         processed: boolean;
         name?: string | null | undefined;
@@ -283,14 +295,17 @@ declare const Session: mongoose.Model<{
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, {}, {}> & {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }>;
         completedAt?: NativeDate | null | undefined;
     } | null | undefined;
@@ -304,9 +319,9 @@ declare const Session: mongoose.Model<{
     timestamps: true;
 }>> & Omit<{
     type: "multi" | "mono";
-    status: "draft" | "active" | "completed";
-    creatorId: mongoose.Types.ObjectId;
+    status: "active" | "draft" | "completed";
     title: string;
+    creatorId: mongoose.Types.ObjectId;
     sourceFiles: mongoose.Types.DocumentArray<{
         processed: boolean;
         name?: string | null | undefined;
@@ -344,14 +359,17 @@ declare const Session: mongoose.Model<{
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, {}, {}> & {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }>;
         completedAt?: NativeDate | null | undefined;
     } | null | undefined;
@@ -370,9 +388,9 @@ declare const Session: mongoose.Model<{
 } | {
     [x: string]: mongoose.SchemaDefinitionProperty<any, any, mongoose.Document<unknown, {}, {
         type: "multi" | "mono";
-        status: "draft" | "active" | "completed";
-        creatorId: mongoose.Types.ObjectId;
+        status: "active" | "draft" | "completed";
         title: string;
+        creatorId: mongoose.Types.ObjectId;
         sourceFiles: mongoose.Types.DocumentArray<{
             processed: boolean;
             name?: string | null | undefined;
@@ -410,14 +428,17 @@ declare const Session: mongoose.Model<{
                 questionId?: string | null | undefined;
                 userAnswer?: string | null | undefined;
                 isCorrect?: boolean | null | undefined;
+                selectedOption?: string | null | undefined;
             }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
                 questionId?: string | null | undefined;
                 userAnswer?: string | null | undefined;
                 isCorrect?: boolean | null | undefined;
+                selectedOption?: string | null | undefined;
             }, {}, {}> & {
                 questionId?: string | null | undefined;
                 userAnswer?: string | null | undefined;
                 isCorrect?: boolean | null | undefined;
+                selectedOption?: string | null | undefined;
             }>;
             completedAt?: NativeDate | null | undefined;
         } | null | undefined;
@@ -431,9 +452,9 @@ declare const Session: mongoose.Model<{
         timestamps: true;
     }>> & Omit<{
         type: "multi" | "mono";
-        status: "draft" | "active" | "completed";
-        creatorId: mongoose.Types.ObjectId;
+        status: "active" | "draft" | "completed";
         title: string;
+        creatorId: mongoose.Types.ObjectId;
         sourceFiles: mongoose.Types.DocumentArray<{
             processed: boolean;
             name?: string | null | undefined;
@@ -471,14 +492,17 @@ declare const Session: mongoose.Model<{
                 questionId?: string | null | undefined;
                 userAnswer?: string | null | undefined;
                 isCorrect?: boolean | null | undefined;
+                selectedOption?: string | null | undefined;
             }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
                 questionId?: string | null | undefined;
                 userAnswer?: string | null | undefined;
                 isCorrect?: boolean | null | undefined;
+                selectedOption?: string | null | undefined;
             }, {}, {}> & {
                 questionId?: string | null | undefined;
                 userAnswer?: string | null | undefined;
                 isCorrect?: boolean | null | undefined;
+                selectedOption?: string | null | undefined;
             }>;
             completedAt?: NativeDate | null | undefined;
         } | null | undefined;
@@ -495,9 +519,9 @@ declare const Session: mongoose.Model<{
     }> | undefined;
 }, {
     type: "multi" | "mono";
-    status: "draft" | "active" | "completed";
-    creatorId: mongoose.Types.ObjectId;
+    status: "active" | "draft" | "completed";
     title: string;
+    creatorId: mongoose.Types.ObjectId;
     sourceFiles: mongoose.Types.DocumentArray<{
         processed: boolean;
         name?: string | null | undefined;
@@ -535,14 +559,17 @@ declare const Session: mongoose.Model<{
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, {}, {}> & {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }>;
         completedAt?: NativeDate | null | undefined;
     } | null | undefined;
@@ -558,9 +585,9 @@ declare const Session: mongoose.Model<{
     __v: number;
 }>, {
     type: "multi" | "mono";
-    status: "draft" | "active" | "completed";
-    creatorId: mongoose.Types.ObjectId;
+    status: "active" | "draft" | "completed";
     title: string;
+    creatorId: mongoose.Types.ObjectId;
     sourceFiles: mongoose.Types.DocumentArray<{
         processed: boolean;
         name?: string | null | undefined;
@@ -598,14 +625,17 @@ declare const Session: mongoose.Model<{
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, mongoose.Types.Subdocument<mongoose.mongo.BSON.ObjectId, unknown, {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }, {}, {}> & {
             questionId?: string | null | undefined;
             userAnswer?: string | null | undefined;
             isCorrect?: boolean | null | undefined;
+            selectedOption?: string | null | undefined;
         }>;
         completedAt?: NativeDate | null | undefined;
     } | null | undefined;
